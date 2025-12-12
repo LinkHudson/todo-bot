@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "description": "A Python bot application",
+  "keywords": [
+    "python",
+    "bot",
+    "dokku"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "bot": {
+      "quantity": 1
+    }
+  }
+}

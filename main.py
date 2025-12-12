@@ -55,8 +55,8 @@ async def on_message(message):
         return
 
     content = message.content.lower()
-    if content.startswith('ping'):
-        await message.channel.send('pong!')
+    if content.startswith('hello'):
+        await message.channel.send('World!')
 
 
     await bot.process_commands(message)

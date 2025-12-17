@@ -30,7 +30,7 @@ async def closings(ctx, school: str = None):
     else:
         schools = ['uniontown', 'albert']
 
-    closings, no_school = get_school_closings(schools, observations=False)
+    closings, no_school = get_school_closings(schools, observations=True)
 
     await ctx.send(closings['msg'])
 

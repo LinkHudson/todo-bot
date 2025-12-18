@@ -6,7 +6,7 @@ from discord.ext import commands
 from lxml.html._diffcommand import description
 from botcommands.school_closings import get_school_closings
 from os import environ
-
+from botcommands.weather import get_weather
 intents = discord.Intents.default()
 intents.message_content = True
 intents.guilds = True            # server join/ready events, required for slash commands
@@ -22,6 +22,13 @@ async def add(ctx, left: int, right: int):
     """Adds two numbers together."""
     print("test")
     await ctx.send(left + right)
+
+@bot.command()
+async def weather(ctx):
+    msg = get_weather()
+
+
+    await ctx.send(msg)
 
 @bot.command()
 async def closings(ctx, school: str = None):
